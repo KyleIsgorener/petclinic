@@ -41,7 +41,7 @@
 	</build>
 
 	<scm>
-		<developerConnection>scm:git:ssh://github.com/git@github.com:KyleIsgorener/petclinic.git</developerConnection>
+		<developerConnection>scm:git:ssh://github.com/KyleIsgorener/petclinic.git</developerConnection>
 	  <tag>HEAD</tag>
   </scm>
 
