@@ -6,7 +6,7 @@ package zentius.spring.petclinic.model;
  * @Author Kyle Isgorener
  *
  */
-public class Person {
+public class Person extends BaseEntity{
 
     private String firstName;
     private String lastName;
