@@ -1,6 +1,5 @@
 package zentius.spring.petclinic.model;
 
-
 /**
  * Simple JavaBean domain object representing a person.
  *
