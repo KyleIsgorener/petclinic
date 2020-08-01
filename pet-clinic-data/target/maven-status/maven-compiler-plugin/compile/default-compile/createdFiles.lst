@@ -1,0 +1,6 @@
+zentius\spring\petclinic\model\Owner.class
+zentius\spring\petclinic\model\PetType.class
+zentius\spring\petclinic\model\Pet.class
+zentius\spring\petclinic\model\Cat.class
+zentius\spring\petclinic\model\Person.class
+zentius\spring\petclinic\model\Vet.class
