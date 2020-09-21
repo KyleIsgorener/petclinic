@@ -1,11 +1,15 @@
 package services.map;
 
-import services.CrudService;
+import services.OwnerService;
 import zentius.spring.petclinic.model.Owner;
 
 import java.util.Set;
 
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
+    @Override
+    public Owner findByLastName(String lastName) {
+        return null;
+    }
 
     @Override
     public Set<Owner> findAll() {
