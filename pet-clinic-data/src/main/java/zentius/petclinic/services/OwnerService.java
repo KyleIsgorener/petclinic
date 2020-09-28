@@ -1,6 +1,8 @@
-package services;
+package zentius.petclinic.services;
 
-import zentius.spring.petclinic.model.Owner;
+
+import zentius.petclinic.model.Owner;
+
 
 public interface OwnerService extends CrudService<Owner, Long> {
 

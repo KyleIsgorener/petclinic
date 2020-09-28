@@ -1,4 +1,4 @@
-package services;
+package zentius.petclinic.services;
 
 import java.util.Set;
 

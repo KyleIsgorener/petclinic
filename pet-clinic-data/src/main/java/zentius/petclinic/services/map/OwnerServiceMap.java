@@ -1,8 +1,8 @@
-package services.map;
+package zentius.petclinic.services.map;
 
 import org.springframework.stereotype.Service;
-import services.OwnerService;
-import zentius.spring.petclinic.model.Owner;
+import zentius.petclinic.model.Owner;
+import zentius.petclinic.services.OwnerService;
 
 import java.util.Set;
 

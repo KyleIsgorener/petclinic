@@ -1,4 +1,4 @@
-package zentius.spring.petclinic.model;
+package zentius.petclinic.model;
 
 import java.io.Serializable;
 

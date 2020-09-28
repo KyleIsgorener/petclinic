@@ -1,4 +1,4 @@
-package zentius.spring.petclinic.model;
+package zentius.petclinic.model;
 
 /**
  * Simple JavaBean domain object representing a person.
@@ -15,9 +15,7 @@ public class Person extends BaseEntity{
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+    public void setFirstName(String firstName) { this.firstName = firstName; }
 
     public String getLastName() {
         return lastName;

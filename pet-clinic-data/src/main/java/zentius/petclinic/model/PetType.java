@@ -1,4 +1,4 @@
-package zentius.spring.petclinic.model;
+package zentius.petclinic.model;
 
 public class PetType extends BaseEntity {
 

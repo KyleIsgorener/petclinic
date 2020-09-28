@@ -1,17 +1,15 @@
-package services.map;
+package zentius.petclinic.services.map;
 
 import org.springframework.stereotype.Service;
-import services.VetService;
-import zentius.spring.petclinic.model.Vet;
+import zentius.petclinic.model.Pet;
+import zentius.petclinic.services.PetService;
 
 import java.util.Set;
 
-
 @Service
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
-
+public class PetServiceMap extends AbstractMapService<Pet,Long> implements PetService {
     @Override
-    public Set<Vet> findAll() {
+    public Set<Pet> findAll() {
         return super.findAll();
     }
 
@@ -21,17 +19,18 @@ public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetS
     }
 
     @Override
-    public void delete(Vet object) {
+    public void delete(Pet object) {
         super.delete(object);
     }
 
     @Override
-    public Vet save(Vet object) {
+    public Pet save(Pet object) {
         return super.save(object.getId(),object);
     }
 
     @Override
-    public Vet findById(Long id) {
+    public Pet findById(Long id) {
         return super.findById(id);
     }
-}
+
+  }
