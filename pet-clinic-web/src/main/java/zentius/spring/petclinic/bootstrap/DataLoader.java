@@ -2,12 +2,12 @@ package zentius.spring.petclinic.bootstrap;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import zentius.petclinic.model.Owner;
-import zentius.petclinic.model.PetType;
-import zentius.petclinic.model.Vet;
+import zentius.petclinic.model.*;
 import zentius.petclinic.services.OwnerService;
 import zentius.petclinic.services.PetTypeService;
 import zentius.petclinic.services.VetService;
+
+import java.time.LocalDate;
 
 /* Issue closed on 9/29/2020*/
 
@@ -40,12 +40,33 @@ public class DataLoader implements CommandLineRunner {
         Owner owner1 = new Owner();
         owner1.setFirstName("Michael");
         owner1.setLastName("Weston");
+        owner1.setAddress("123 Brighton");
+        owner1.setCity("Miami");
+        owner1.setTelephone("123123123");
+
+        Pet mikesPet = new Pet();
+        mikesPet.setPetType(savedDogPetType);
+        mikesPet.setOwner(owner1);
+        mikesPet.setBirthDate(LocalDate.now());
+        mikesPet.setName("Vincent");
+        owner1.getPets().add(mikesPet);
 
         ownerService.save(owner1);
 
         Owner owner2 = new Owner();
         owner2.setFirstName("Fiona");
         owner2.setLastName("Glenanne");
+        owner2.setAddress("123 Brighton");
+        owner2.setCity("Miami");
+        owner2.setTelephone("123123123");
+
+        Pet fionasCat = new Cat();
+        fionasCat.setName("cat");
+        fionasCat.setOwner(owner2);
+        fionasCat.setBirthDate(LocalDate.now());
+        fionasCat.setPetType(savedCatPetType);
+        owner2.getPets().add(fionasCat);
+
 
         ownerService.save(owner2);
 
