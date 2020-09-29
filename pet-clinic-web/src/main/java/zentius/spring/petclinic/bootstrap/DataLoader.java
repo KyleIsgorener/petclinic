@@ -3,8 +3,10 @@ package zentius.spring.petclinic.bootstrap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import zentius.petclinic.model.Owner;
+import zentius.petclinic.model.PetType;
 import zentius.petclinic.model.Vet;
 import zentius.petclinic.services.OwnerService;
+import zentius.petclinic.services.PetTypeService;
 import zentius.petclinic.services.VetService;
 
 /* Issue closed on 9/29/2020*/
@@ -12,26 +14,28 @@ import zentius.petclinic.services.VetService;
 @Component
 public class DataLoader implements CommandLineRunner {
 
-
     private final VetService vetService;
     private final OwnerService ownerService;
+    private final PetTypeService petTypeService;
 
-    // After Spring 4.2 you don't need to use autowired annotation because it is implemented automatically
-    public DataLoader(VetService vetService, OwnerService ownerService) {
+    public DataLoader(VetService vetService, OwnerService ownerService, PetTypeService petTypeService) {
         this.vetService = vetService;
         this.ownerService = ownerService;
+        this.petTypeService = petTypeService;
     }
-
-    /*
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
-    }
-    */
 
 
     @Override
     public void run(String... args) throws Exception {
+
+        PetType dog = new PetType();
+        dog.setName("dog");
+        PetType savedDogPetType = petTypeService.save(dog);
+
+        PetType cat = new PetType();
+        cat.setName("cat");
+        PetType savedCatPetType = petTypeService.save(cat);
+
 
         Owner owner1 = new Owner();
         owner1.setFirstName("Michael");
