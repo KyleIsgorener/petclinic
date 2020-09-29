@@ -27,4 +27,9 @@ public class OwnerController {
     public String specialOwners() {
         return "owners/special";
    }
+
+   @RequestMapping("/find")
+    public String findOwners() {
+        return "notImplemented";
+    }
 }
