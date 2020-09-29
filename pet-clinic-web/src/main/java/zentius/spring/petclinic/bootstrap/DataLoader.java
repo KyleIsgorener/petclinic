@@ -7,6 +7,7 @@ import zentius.petclinic.model.Vet;
 import zentius.petclinic.services.OwnerService;
 import zentius.petclinic.services.VetService;
 
+/* Issue closed on 9/29/2020*/
 
 @Component
 public class DataLoader implements CommandLineRunner {
